@@ -1,0 +1,131 @@
+/* Color Variables */
+:root {
+  --primary-color-dark: #557A95; /* Darker shade for contrast */
+  --primary-color-light: #89CFF0; /* Baby blue color */
+  --text-color: #333333; /* Dark text for better readability */
+  --background-color: #F1F7FA; /* Light background color */
+  --sidebar-width: 60px; /* Adjust sidebar width as needed */
+  --icon-hover-color: var(--primary-color-light); /* Color for icon hover state */
+}
+
+/* General App Styles */
+.app {
+  
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Use a modern sans-serif font */
+  border: 10px solid #000013; /* Dark blue color for the border */
+  box-sizing: border-box; /* This ensures the border doesn't add to the width/height */
+  margin: 0; /* Reset any default margin */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Use a modern sans-serif font */
+}
+
+/* Dark Theme Styles */
+.app.dark {
+  --icon-color: #ffffff; /* White icons for dark theme */
+}
+
+/* Light Theme Styles */
+.app.light {
+  --icon-color: #333333; /* Dark icons for light theme */
+}
+
+/* Sidebar Styles */
+.left-sidebar, .right-sidebar {
+  background-color: transparent; /* No background color */
+  width: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centralize icons */
+  height: 100%;
+  position: fixed;
+  top: 50%; /* Start at the middle of the page */
+  transform: translateY(-50%); /* Adjust to exactly center */
+  transition: transform 0.3s;
+}
+
+.left-sidebar {
+  left: 0;
+}
+
+.right-sidebar {
+  right: 0;
+}
+
+/* Icon Styles */
+.icon {
+  color: var(--icon-color);
+  margin: 20px 0;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+/* Icons color transition on hover */
+.icon:hover {
+  color: var(--icon-hover-color);
+}
+
+/* Main Content Styles */
+.main-content {
+  flex-grow: 1;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+  transition: background-color 0.3s;
+  box-sizing: border-box;
+  flex-grow: 1;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+  transition: background-color 0.3s;
+}
+.theme-toggle {
+  margin-bottom: 40px;
+}
+
+/* Profile Picture Styles */
+.profile-pic {
+  border-radius: 50%;
+  width: 200px;
+  margin-right: 40px;
+}
+
+/* Text Content Styles */
+.text-content {
+  text-align: left;
+  color: var(--text-color);
+}
+
+/* Header Styles */
+h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Button Styles */
+.more-about-btn {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  margin-top: 20px;
+  outline: none;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* Button hover effect */
+.more-about-btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+/* Add any additional specific styles that match the pink design here */
